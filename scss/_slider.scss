@@ -1,0 +1,244 @@
+.slider {
+  background: #eaeaea;
+}
+
+.slider-inner {
+  min-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.slider-inner-item {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  h1 {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    margin: 13.4px 0;
+  }
+
+  p {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #acacac;
+    margin: 17px 0 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #494848;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 15px 0;
+    position: relative;
+  }
+
+  li {
+    height: 46px;
+    text-align: center;
+    padding: 20px 0;
+    list-style: none;
+  }
+}
+
+.slider-inner-info {
+  background: #fff;
+}
+
+.slider-inner-info-item {
+  padding: 50px 50px 20px 50px;
+}
+
+.slider-inner-info-item-img {
+  display: flex;
+  align-items: center;
+
+  span {
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+  }
+
+  img {
+    height: 68px;
+    width: 122px;
+  }
+}
+
+.slider-inner-info-item-text {
+  h2 {
+    font-size: 31px;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px 0 10px 0;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+@media only screen and(min-width:768px) {
+  .slider {
+    background: #eaeaea;
+  }
+
+  .slider-inner {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+@media only screen and(min-width:1024px) {
+  .slider-inner {
+    min-height: 315px;
+  }
+
+  .slider-inner-item {
+    h1 {
+      font-size: 45px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 800;
+      margin: 84px 0 11px 0;
+      display: inline-block;
+    }
+
+    h1::after {
+      content: url(../img/Shape.png);
+      margin: 0 20px;
+    }
+
+    h1::before {
+      content: url(../img/Shape.png);
+      margin: 0 20px;
+    }
+
+    p {
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #acacac;
+      margin: 17px 0 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #494848;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 15px 0;
+      position: relative;
+    }
+
+  
+
+    a::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background-color: #ee252d;
+      bottom: -5.5px;
+      display: none;
+    }
+
+    a::after {
+      content: "";
+      position: absolute;
+      border: 10px solid #ee252d;
+      border-color: transparent transparent #ee252d transparent;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+    }
+
+    a:hover{
+      &:after,
+      &:before{
+        display: block;
+      }
+    }
+
+
+    li {
+      height: 46px;
+      text-align: center;
+      padding: 20px 0;
+      list-style: none;
+      position: relative;
+    }
+
+    li:nth-child(n + 2)::before {
+      content: "|";
+      font-size: 18px;
+      font-weight: 900;
+      position: absolute;
+      left: -22px;
+      top: 14px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+  }
+
+  .slider-inner-info {
+    margin: 0 auto;
+    height: 400px;
+    width: 920px;
+    background: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .slider-inner-info-item {
+    height: 400px;
+    width: 380px;
+    padding: 50px 50px 20px 50px;
+  }
+
+  .slider-inner-info-item-img {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 100px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
+    }
+
+    img {
+      height: 68px;
+      width: 122px;
+    }
+  }
+
+  .slider-inner-info-item-text {
+    h2 {
+      font-size: 31px;
+      font-weight: 800;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 15px 0 10px 0;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+}

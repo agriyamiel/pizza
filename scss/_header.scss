@@ -1,0 +1,142 @@
+.header-inner-menu{
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    transition: 0.7s;
+
+    li{
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 6px 0;
+    }
+    
+    a{
+        color: #494949;
+        text-decoration: none;
+        font-weight: bold;
+
+    }
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~ .header-inner-menu{
+   height: 150px;
+   padding: 10px;
+}
+
+.lab{
+    position: absolute;
+    right: 70px;
+    top: 29px;
+}
+
+
+.header-inner{
+    margin-top: 20px;
+}
+.header-inner-logo{
+
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 22px;
+    img{
+        width: 90px;
+        height: auto;
+    }
+}
+
+.lab span,
+.lab span::before,
+.lab span::after {
+  display: block;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.lab span::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.lab span::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#check:checked ~ .lab span::before {
+    margin-top: 0px;
+    transform: rotate(140deg);
+  }
+  
+  #check:checked ~  .lab span {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #check:checked ~ .lab span::after {
+    margin-top: 0px;
+    transform: rotate(-140deg);
+  }
+  
+  @media only screen and(min-width:1024px){
+    .header-inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 125px;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 10px 0 10px;
+    }
+
+    .header-inner-logo{
+        img{
+            height:auto;
+            width: 150px;
+        }
+    }
+
+    .lab{
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 26px;
+    }
+
+    .header-inner-menu{
+        display: flex;
+        gap: 20px;
+        height:50px;
+        font-size: 23px;
+        list-style: none;
+        font-family: Arial, Helvetica, sans-serif;
+
+        li{
+            height: 31px;
+            font-size: 23px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 6px 15px 0 0;
+            position: relative;
+        }
+
+        li:nth-child(n+2):before{
+            content: "";
+            height: 15px;
+            width: 3px;
+            background: #000;
+            position: absolute;
+            top: 10px;
+            left: -20px;
+        }
+
+    }
+
+
+    }
